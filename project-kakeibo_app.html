@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>kakeibo_app</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>MY PORTFOLIO</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="projects.html">PROJECTS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <section class="section">
+            <h2>kakeibo_app</h2>
+
+            <div class="card">
+                <h3>概要</h3>
+                <p>収入・支出を記録・管理できるWeb家計簿アプリです。支出の登録・編集・削除に対応し、月ごとにデータを切り替えて表示できます。カテゴリ別の円グラフで支出傾向も視覚的に確認できます。</p>
+            </div>
+
+            <div class="card">
+                <h3>開発背景</h3>
+                <p>日々の支出を可視化して管理する習慣をつけたいと考え、自分で使うことを想定して制作しました。既存のアプリに頼るのではなく、自分の手で作ることでフロントエンドの実装力を高める目的もありました。</p>
+            </div>
+
+            <div class="card">
+                <h3>ターゲット</h3>
+                <p>シンプルな操作でお金の収支を管理したい個人ユーザー。アプリに不慣れな方でも直感的に使えるUIを意識しています。</p>
+            </div>
+
+            <div class="card">
+                <h3>使用技術</h3>
+                <p>HTML / CSS / JavaScript / Chart.js<br>
+                    データの保存にはブラウザのLocalStorageを採用。設計検討や実装の一部でAIツールを活用しながら、ロジックの理解とコードの最終調整は自身で行いました。</p>
+            </div>
+
+            <div class="card">
+                <h3>技術選定理由</h3>
+                <p>サーバーを用意せずブラウザだけで完結させるため、フロントエンドのみの構成を採用しました。LocalStorageを活用することでリロード後もデータが消えない仕組みを実現。グラフ描画にはChart.jsを採用し、ライブラリを用いた開発の流れも習得しました。
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>工夫した点</h3>
+                <p>支出明細を管理するページでは「←　⚪︎月　→」形式のボタンで月を直感的に切り替えられるUIを実装しました。また、支出登録時に入力した日付から月キーを自動生成し、月別フィルタリングが正確に機能するよう設計しました。残高はお小遣い登録・支出登録のたびにリアルタイムで更新され、常に現在の状況が把握できます。
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>苦労した点</h3>
+                <p>JavaScriptのDate処理がタイムゾーンの影響で日付をズラしてしまうバグに悩みました。原因を調査した結果、日付文字列から直接月を取得する方法に切り替えることで解決しました。デバッグを通じて、日付処理の落とし穴を実体験として学べました。
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>今後の改善点</h3>
+                <p>スマートフォンでも快適に使えるレスポンシブ対応を優先課題としています。また、月をまたいだ収支の推移グラフや、バックエンドと連携したユーザーごとのデータ管理機能も将来的に追加したいと考えています。</p>
+            </div>
+
+            <div class="card">
+                <h3>GitHub</h3>
+                <a href="#" class="btn">GitHubで見る</a>
+            </div>
+
+        </section>
+
+    </div>
+
+    <footer>
+        © 2026 My Portfolio
+    </footer>
+
+</body>
+
+</html>

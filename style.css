@@ -1,0 +1,173 @@
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #ffffff;
+    color: #222;
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+    padding: 40px 0;
+    text-align: center;
+    border-bottom: 1px solid #f0f0f0;
+    position: relative;
+    z-index: 10;
+    /* カード浮き上がり対策 */
+}
+
+header h1 {
+    font-size: 32px;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 100px auto;
+    flex: 1;
+}
+
+.section {
+    margin-bottom: 120px;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 36px;
+    letter-spacing: 3px;
+    margin-bottom: 60px;
+}
+
+/* =========================
+   CARD
+========================= */
+.card {
+    border: 1px solid #eee;
+    padding: 40px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transform: translateY(-3px);
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* 画像 */
+.card img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    transition: 0.3s ease;
+}
+
+.card:hover img {
+    transform: scale(1.02);
+}
+
+/* =========================
+   GRID（Projects用）
+========================= */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+.btn {
+    display: inline-block;
+    margin-top: auto;
+    /* 下に押し出す */
+    align-self: flex-end;
+    /* 右寄せ */
+    padding: 10px 24px;
+    border: 2px solid #222;
+    text-decoration: none;
+    color: #222;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #222;
+    color: #fff;
+}
+
+/* =========================
+   HERO（トップページ）
+========================= */
+.hero h2 {
+    font-size: 42px;
+    text-align: center;
+    min-height: 60px;
+}
+
+.hero-hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.8s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    border-top: 1px solid #eee;
+    padding: 40px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* トップページのメインボタンだけ少し下げる */
+.hero .btn {
+    margin-top: 40px;
+}
